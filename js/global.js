@@ -4,9 +4,9 @@ window.onload = function () {
 	/* 参数设置(默认) */
 	windowOnTop = true;
 	finishAutoRest = false;
-	clockTime = 25;
-	clockSRestTime = 5;
-	clockLRestTime = 15;
+	clockTime = 25*60;
+	clockSRestTime = 5*60;
+	clockLRestTime = 15*60;
 	lRestInterval = 4;
 	soundRemind = true;
 	tick = false;
@@ -351,9 +351,9 @@ window.onload = function () {
  		var liMissionTime = document.getElementById("li-missionTime");
  		var liRestTime = document.getElementById("li-restTime");
  		var t = parseInt(clockTime) + parseInt(clockSRestTime);
- 		liTotalTime.innerHTML = t + "分钟";
- 		liMissionTime.innerHTML = clockTime + "分钟";
- 		liRestTime.innerHTML = clockSRestTime + "分钟";
+ 		liTotalTime.innerHTML = t/60 + "分钟";
+ 		liMissionTime.innerHTML = clockTime/60 + "分钟";
+ 		liRestTime.innerHTML = clockSRestTime/60 + "分钟";
  	}
  	/* 任务界面添加任务按钮的点击事件 */
 
